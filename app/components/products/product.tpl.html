@@ -1,0 +1,51 @@
+﻿<div ng-show="visible">
+  <form >
+    <div input-field>
+      <input type="text" id="productName" ng-model="form.productName"  >
+      <label for="productName">Product Name</label>
+    </div>
+    <div input-field>
+      <input type="text" id="productImage" ng-model="form.productImage"  >
+      <label for="productImage">Image</label>
+    </div>
+    <div input-field>
+      <input type="text" id="productDescription" ng-model="form.productDescription" >
+      <label for="productDescription">Description</label>
+    </div>
+    <div input-field>
+      <input type="text" id="productPrice" ng-model="form.productPrice">
+      <label for="productPrice">Price</label>
+    </div>
+    <div input-field>
+      <input type="text" id="productCategory" ng-model="form.productCategory">
+      <label for="productCategory">Category</label>
+    </div>
+
+    <a class="waves-effect waves-light btn" type="submit" ng-click="addProduct()">Add</a>
+  </form>
+</div>
+<h2 class="intro-text">{{error}}</h2>
+
+<!--Products-->
+<div ng-hide="visible">
+  <button class="waves-effect waves-light btn" ng-click="showForm()">Add New Product</button>
+  <div class="row prod_container" >
+
+  <div class="card col s12 m4 12 all_pro_card" ng-repeat="prod in products" >
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" ng-src="../images/products/{{prod.productImage}}" class="img-responsive product-img">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">{{prod.productName}}<i class="material-icons right">more_vert</i></span>
+
+        <h5>Price: {{prod.productPrice | currency: "€ "}}</h5>
+
+      <!--<p><a href="#">This is a link</a></p>-->
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">{{prod.productName}}<i class="material-icons right">close</i></span>
+      <p>{{prod.productDescription }}</p>
+    </div>
+  </div>
+</div>
+</div>

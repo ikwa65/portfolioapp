@@ -1,0 +1,29 @@
+<div class="header">
+  <div class="navbar navbar-inverse blue-grey darken-4" role="navigation" >
+    <div class="container">
+      <div class="navbar-header">
+
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="#/">portfolioApp</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="js-navbar-collapse">
+
+        <ul class="nav navbar-nav">
+          <li ng-class="{active: isActive('/')}">        <a ui-sref="/">Home</a></li>
+          <li ng-class="{active: isActive('/about')}">   <a ui-sref="/about">About</a></li>
+         
+          <li ng-class="{active: isActive('/products')}"><a ui-sref="/products" >Products</a></li><!--ng-if="toolbar.auth.isAuthenticated"-->
+          <li ng-class="{active: isActive('/customers')}"><a ui-sref="/customers" >Customers</a></li>
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</div>

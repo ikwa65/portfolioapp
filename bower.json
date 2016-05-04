@@ -1,0 +1,30 @@
+{
+  "name": "portfolio-app",
+  "version": "0.0.0",
+  "dependencies": {
+    "bootstrap-sass-official": "^3.2.0",
+    "angular": "^1.5.5",
+    "angular-animate": "^1.5.5",
+    "angular-aria": "^1.5.5", 
+    "angular-material": "^1.0.8",
+    "angular-messages": "^1.5.5",  
+    "angular-resource": "^1.5.5"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.4.0"
+  },
+  "appPath": "app",
+  "moduleName": "portfolioAppApp",
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "less/bootstrap.less",
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js"
+      ]
+    }
+  },
+  "install": {
+    "path": "app/libs"
+  }
+}

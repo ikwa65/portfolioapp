@@ -1,0 +1,95 @@
+<!doctype html>
+<html ng-app="myApp">
+  <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <title></title>    
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.3.0/animate.min.css" type="text/css"/>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="libs/angular-material/angular-material.css" />
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- endbuild -->
+    <script>
+     var myEvent = window.attachEvent || window.addEventListener;
+     var chkevent = window.attachEvent ? 'onbeforeunload' : 'beforeunload'; /// make IE7, IE8 compatable
+
+     myEvent(chkevent, function(e) { // For >=IE7, Chrome, Firefox
+       var confirmationMessage = ' ';  // a space
+       (e || window.event).returnValue = confirmationMessage;
+       return confirmationMessage;
+     });
+    </script>
+  </head>
+  <body >
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+
+
+    <div  class="container">
+      <navbar></navbar>
+      <ui-view></ui-view>
+      <div class="footer">
+          <toolbar></toolbar>
+
+      </div>
+    </div>
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+    <script src="libs/jquery/jquery.js"></script>
+    <script src="libs/angular/angular.js"></script>
+    <script src="libs/angular-route/angular-route.js"></script>
+    <script src="libs/angular-animate/angular-animate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+    <script src="libs/angular-aria/angular-aria.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/restangular/1.4.0/restangular.js"></script>
+    <script src="libs/angular-material/angular-material.js"></script>
+    <script src="libs/angular-resource/angular-resource.js"></script>
+    <!--<script src="libs/materialize/materialize.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <script src="libs/angular-materialize/angular-materialize.js"></script>
+    <script src="libs/angular-ui-bootstrap/ui-bootstrap-tpls.js"></script>
+
+
+    <script src="app.js"></script>
+    <script src="components/home/home.ctrl.js"></script>   
+    <script src="components/navbar/navbar.dir.js"></script>
+    <script src="components/toolbar/toolbar.dir.js"></script>
+    <script src="components/customer/customer.ctrl.js"></script>
+    <script src="components/customer/customer.srv.js"></script>
+    <script src="components/about/about.ctrl.js"></script>
+    <script src="components/products/product.ctrl.js"></script>
+    <script src="components/products/product.srv.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+</body>
+</html>

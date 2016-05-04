@@ -1,0 +1,77 @@
+<div ng-show="visible">
+  <form name="cusForm" class="cusForm" novalidate>
+    <div input-field>
+      <input type="text" id="firstName" name="firstName" ng-model="form.firstName" ng-required="true">
+      <label for="firstName">First Name</label>
+      <div ng-show="cusForm.firstName.$touched && cusForm.firstName.$invalid">
+        <span >First Name is required</span>
+      </div>
+    </div>
+    <div input-field>
+      <input type="text" id="lastName" name="lastName" ng-model="form.lastName"  ng-required="true">
+      <label for="lastName">Last Name</label>
+      <div ng-show="cusForm.lastName.$touched && cusForm.lastName.$invalid">
+        <span >Last Name is required</span>
+      </div>
+    </div>
+    <div input-field>
+      <input type="text" id="phone" ng-model="form.phone">
+      <label for="phone">Phone Number</label>
+    </div>
+    <div input-field>
+      <input type="text" id="street" name="street" ng-model="form.address.street" ng-required="true" >
+      <label for="street">Street</label>
+      <div ng-show="cusForm.street.$touched && cusForm.street.$invalid">
+        <span>Street is required</span>
+      </div>
+    </div>
+    <div input-field>
+      <input type="text" id="city" name="city" ng-model="form.address.city"  ng-required="true">
+      <label for="city">City</label>
+      <div ng-show="cusForm.city.$touched && cusForm.city.$invalid">
+        <span>City is required</span>
+      </div>
+    </div>
+    <div input-field>
+      <input type="text" id="county" name="county"  ng-model="form.address.county"  ng-required="true">
+      <label for="county">County</label>
+      <div ng-show="cusForm.county.$touched && cusForm.county.$invalid">
+        <span>County is required</span>
+      </div>
+    </div>
+    <div input-field>
+      <input type="text" id="postal" ng-model="form.address.postal">
+      <label for="postal">Postal</label>
+    </div>
+    <a class="waves-effect waves-light btn" type="submit" ng-click="addCustomer()" ng-disabled="cusForm.$invalid">Submit</a>
+  </form>
+</div>
+
+<div ng-hide="visible">
+  <button class="waves-effect waves-light btn" ng-click="showForm()">Add New Customer</button>
+  <hr>
+  <table class="table table-striped">
+    <thead>
+    <th>Name</th>
+    <th>Phone</th>
+    <th>Street</th>
+    <th>City </th>
+    <th>County</th>
+
+    <th></th>
+    </thead>
+    <tbody>
+    <tr ng-repeat="cust in customers | startFrom: (currentPage - 1) * pageSize | limitTo: pageSize">
+      <td>{{cust.firstName}} {{cust.lastName}}</td>
+      <td>{{cust.phone}}</td>
+      <td>{{cust.address.street}} </td>
+      <td>{{cust.address.city}} </td>
+      <td>{{cust.address.county}} {{cust.address.postal}}</td>
+      <td><i class="fa fa-trash" ng-click="delete($index)"></i></td>
+    </tr>
+    </tbody>
+    <uib-pagination  total-items="customers.length" ng-model="currentPage" items-per-page="pageSize" class="pagination-sm"></uib-pagination >
+
+  </table>
+
+</div>

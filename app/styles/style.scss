@@ -1,0 +1,154 @@
+$light-blue: #337ab7;
+$body-color: #eceff1;
+$main-color: #37474f;
+
+html{
+  background-color: $body-color;
+}
+
+body{
+  background-color: $body-color;
+}
+footer{
+  background-color: $body-color;
+}
+
+div.info{
+  font-family: 'Lobster Two', cursive;
+  h2{
+    font-size: 4rem;
+    text-align: center;
+  }
+  p{
+    font-size: 2.5rem;
+  }
+  li{
+    font-size: 2rem;
+    margin-left: 3rem;
+    span{
+      font-weight: bold;
+      color: $light-blue;
+    }
+
+  }
+}
+a, a:hover, a:focus, a:active {
+  outline: 0;
+  cursor: pointer;
+}
+.btn{
+  outline: 0;
+}
+.wrapper{
+  margin-top: 6rem;
+}
+.slider .indicators .indicator-item.active{
+  background-color: $main-color !important;
+}
+i:hover.fa-trash{
+  cursor: pointer;
+}
+
+tr.ng-enter{
+  animation: bounceInUp 1s;
+}
+tr.ng-leave{
+  animation: lightSpeedOut 1s;
+}
+div.bootbox{
+  background-color:  rgba(250, 250, 250, 0) !important;
+  max-height: 100% !important;
+  width: 100% !important;
+}
+[ng\:cloak],[ng-cloak], .ng-cloak {
+  display: none;
+}
+.cat-img {
+  width: 250px;
+  height: 150px;
+}
+.img-left {
+  float: left;
+  margin-right: 25px;
+}
+.intro-text {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.25em;
+  font-weight: 400;
+}
+.box {
+  margin-bottom: 20px;
+  padding: 20px 15px;
+
+}
+.cat_block {
+  background-color: #3b3b3b;
+  padding-bottom: 20px;
+}
+.prod_container {
+
+  margin-left: -0.55% !important;
+
+}
+.prod_container img {
+  height: 230px;
+  margin-top: 10px !important;
+}
+
+.all_pro_card {
+  width: 32% !important;
+  height: 420px;
+  margin-left: 6px !important;
+  margin-right: 10px !important;
+}
+.table>thead>tr>th{
+  font-size: large;
+  color: #000;
+}
+//input.ng-invalid.ng-touched{
+//    background-color: rgba(255, 3, 0, 0.23);
+//  }
+
+@media only screen and (max-width: 720px) {
+  .all_pro_card {
+    width: 100% !important;
+    height: 420px;
+    margin-left: 6px !important;
+    margin-right: 10px !important;
+  }
+}
+.cusForm{
+  margin-bottom: 1.5rem;
+  span{
+    color:red;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+  }
+  input{
+    padding-left: 4px;
+  }
+}
+.pagination li.active{
+  background-color: inherit ;
+}
+.pagination>.active>a, .pagination>.active>a:focus,
+.pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover{
+  background-color: $main-color;
+  border-radius: 5px;
+  border-color:$main-color;
+}
+.card-panel{
+  font-family: 'Courgette', cursive;
+  p{
+    font-size: 1.5rem;
+  }
+  span{
+    color: red;
+  }
+  h5{
+    line-height: 2.5rem;
+  }
+}
