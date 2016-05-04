@@ -6,7 +6,7 @@
 angular.module('myApp', [
   "ngRoute",
   'ngAnimate',
-  'angular-storage', 
+  
   'ngMaterial',
   'ui.materialize',
   'ui.router',
