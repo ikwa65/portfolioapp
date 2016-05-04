@@ -13,7 +13,7 @@
         controllerAs: 'toolbar'
       }
     }
-    function toolbarController(auth, store, $location){
+    function toolbarController(){
     
     }
 })();
