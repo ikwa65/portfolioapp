@@ -8,7 +8,7 @@ var config     = require('./server/config/config');
 var mongoose   = require('mongoose');
 var bodyParser = require('body-parser');
 var api        = express.Router();
-app.use(cors());
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
