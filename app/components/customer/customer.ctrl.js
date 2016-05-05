@@ -7,7 +7,9 @@ angular
   .controller('customerController', ['$scope','customerService', function($scope, customerService){
 
   $scope.customers = [];
+  $scope.customer = [];
   $scope.form = {};
+  
   $scope.visible = false;
     $scope.pageSize = 5;
     $scope.currentPage = 1;
@@ -34,7 +36,16 @@ angular
     customerService.Customer.query({}, $scope.form, function(data){
       $scope.customers = data;
     });
-
+    
+    $scope.showCustomer = function(index){
+      customerService.Customer.get({id: $scope.customers[index]._id}, $scope.form,  function(data){
+            $scope.customer = data;
+            $scope.address = "Address:"
+            $scope.card = 'card'
+          });
+    }
+    
+    
     $scope.delete = function(index){
       bootbox.confirm("Are you sure?", function(result) {
         if(result === true){

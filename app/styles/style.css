@@ -124,5 +124,11 @@ div.bootbox {
     color: red; }
   .card-panel h5 {
     line-height: 2.5rem; }
-
-/*# sourceMappingURL=style.css.map */
+    
+#demoModal{
+  background-color:rgba(250, 250, 250, 0);
+  box-shadow: 0 16px 28px 0 rgba(0,0,0,0.0),0 25px 55px 0 rgba(0,0,0,0.0);
+}
+.modal-footer{
+  margin-top: 2rem;
+}
